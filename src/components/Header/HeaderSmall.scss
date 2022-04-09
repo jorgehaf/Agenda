@@ -1,0 +1,35 @@
+#ContainerHeader {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F8F9FD;
+
+    #logoUbook {
+        margin: 16px;
+    }
+
+    #groupInput {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        background-color: #E4E7F4;
+        width: 60%;
+        margin: 12px;
+        padding: 4px 8px 4px 4px;
+        border-radius: 4px;
+
+        #inputSearch {
+            width: 100%;
+            background-color: #E4E7F4;
+            border: 0;
+            color: #6b7080;
+        }
+
+        #inputSearch:focus {
+            outline: none !important;
+        }
+    }
+}
