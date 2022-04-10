@@ -1,0 +1,74 @@
+#ContainerModal {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.439);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #groupForm {
+        background-color: rgb(255, 255, 255);
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+        color: #494d58;
+
+        .elementGroup {
+            padding: 16px;
+        }
+
+        #groupInputs {
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid #9198AF;
+            border-bottom: 1px solid #9198AF;
+
+            input {
+                margin: 4px 0 8px 0;
+                width: 100%;
+                background-color: #E4E7F4;
+                border: 0;
+                height: 24px;
+                border-radius: 4px;
+            }
+
+            input:focus {
+                outline: none !important;
+            }
+        }
+
+        #groupButtons {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            div {
+                color: #FA7268;
+                cursor: pointer;
+            }
+
+            button {
+                margin: 4px 4px 4px 16px;
+                border: 0;
+                border-radius: 16px;
+                padding: 8px 16px;
+
+            }
+
+            .buttonActivated {
+                background-color: #FA7268;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+
+            .buttonDisabled {
+                background-color: #fa726890;
+                color: #FFFFFF;
+            }
+        }
+    }
+}

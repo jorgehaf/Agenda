@@ -1,0 +1,64 @@
+#ContainerTabela {
+
+    #tabela {
+        border: 1px solid rgb(158, 158, 158);
+        margin: 16px;
+        border-radius: 8px;
+
+        #headerTabela {
+            display: flex;
+            flex-direction: row;
+            padding: 16px;
+            border-bottom: 1px solid rgb(158, 158, 158);
+
+            #contato {
+                width: 30%;
+            }
+
+            #email {
+                width: 40%;
+            }
+
+            #telefone {
+                width: 20%;
+            }
+        }
+
+        #bodyTabela {
+
+            .row {
+                padding: 16px;
+                display: flex;
+                flex-direction: row;
+
+                .nome {
+                    width: 30%;
+                }
+
+                .email {
+                    width: 40%;
+                }
+
+                .telefone {
+                    width: 20%;
+                }
+
+                .optionsContato {
+                    width: 10%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+
+                    img {
+                        padding: 4px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .row:hover {
+                background-color: #E1E1E1;
+            }
+        }
+    }
+}

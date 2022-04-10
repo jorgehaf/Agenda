@@ -1,6 +1,7 @@
 <template>
   <div id="ContainerHeader">
     <img id="logoUbook" src="../../assets/Images/Ubook-logo.svg" alt="Logo Ubook" />
+    <button v-if="contatos[0]" id="buttonCriarContato" @click="this.$store.dispatch('changeModalNovoContato', { show: true, contatoEdicao: {} })"><img src="../../assets/Icons/ic-plus.svg" /> Criar Contato</button>
     <div id="groupInput">
       <input id="inputSearch" type="text" placeholder="Buscar..." />
       <img src="../../assets/Icons/ic-search.svg" alt="Icone de pesquisa" />
@@ -9,7 +10,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  computed: {
+    contatos() {
+      return this.$store.getters.getContatos;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>

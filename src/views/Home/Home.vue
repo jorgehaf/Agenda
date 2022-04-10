@@ -1,6 +1,6 @@
 <template>
   <div id="ContainerHome">
-    <ModalNovoContato v-if="showModal" />
+    <ModalCriarEditarContato v-if="showModal" />
     <Header />
     <Agenda />
   </div>
@@ -9,16 +9,13 @@
 <script>
 import Header from "../../components/Header/Header.vue";
 import Agenda from "../../components/Agenda/Agenda.vue";
-import ModalNovoContato from "../../components/ModalNovoContato/ModalNovoContato.vue";
+import ModalCriarEditarContato from "../../components/ModalCriarEditarContato/ModalCriarEditarContato.vue";
 
 export default {
-  components: { Header, Agenda, ModalNovoContato },
-  data() {
-    return {};
-  },
+  components: { Header, Agenda, ModalCriarEditarContato },
   computed: {
     showModal() {
-      return this.$store.getters.getShowModalNovoContato;
+      return this.$store.getters.getModalContato.show;
     },
   },
 };

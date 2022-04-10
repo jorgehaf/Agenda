@@ -9,6 +9,24 @@
     #logoUbook {
         margin: 16px;
     }
+    
+    #buttonCriarContato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #DBFF90;
+        padding: 12px;
+        border: 0;
+        border-radius: 24px;
+        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+        color: #FA7268;
+        cursor: pointer;
+        font-size: 14px;
+
+        img {
+            padding: 0 6px;
+        }
+    }
 
     #groupInput {
         display: flex;
