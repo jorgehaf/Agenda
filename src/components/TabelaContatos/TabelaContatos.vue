@@ -7,7 +7,7 @@
         <div id="telefone">Telefone</div>
       </div>
       <div v-for="contato in contatos" :key="contato" id="bodyTabela">
-        <div class="row">
+        <div class="row" v-if="contato.nome || contato.email || contato.telefone">
           <div class="nome">{{ contato.nome }}</div>
           <div class="email">{{ contato.email }}</div>
           <div class="telefone">{{ contato.telefone }}</div>
@@ -26,11 +26,11 @@ export default {
   props: ["contatos"],
   methods: {
     editarContato(contato) {
-        this.$store.dispatch('changeModalNovoContato', { show: true, contatoEdicao: contato })
+      this.$store.dispatch("changeModalNovoContato", { show: true, contatoEdicao: contato });
     },
     excluirContato(contato) {
-        this.$store.dispatch('excluirContato', { show: true, contatoEdicao: contato })
-    }
+      this.$store.dispatch("excluirContato", { show: true, contatoEdicao: contato });
+    },
   },
 };
 </script>
